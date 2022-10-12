@@ -5,8 +5,97 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/login.css">
+  <!-- 导入layUI的样式 -->
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
 </head>
 <body>
+  <!-- 头部的logo区域 -->
+  <div class="layui-main">
+    <img src="/assets/images/logo.png" alt="">
+  </div>
+
+  <!-- 登录注册区域 -->
+  <div class="loginAndRegBox">
+    <div class="title-box"></div>
+    <!-- 登录和注册页面 -->
+
+    <!-- 登录页面 -->
+    <div class="login-box">
+      <!-- 登录的表单 -->
+
+      <!-- 表单用的是之前导入的layui样式 -->
+      <form class="layui-form" id="form_login">
+
+        <!-- 用户名 -->
+        <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>   
+            <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+          </div>
+
+      <!-- 密码 -->
+      <div class="layui-form-item">
+        <i class="layui-icon layui-icon-password"></i> 
+        <!-- lay-verify是一个layui必备的验证表单的属性 需要导入layui的js文件才可以正常使用 -->
+        <input type="password" name="password" required  lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+      </div>
+
+      <!-- 登录按钮 -->
+      <div class="layui-form-item">
+        <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
+      </div>
+    
+
+      <!-- 令herf等于Javascript的原因是为了点击a链接的时候不会自动跳转 -->
+      <div class="layui-form-item links">
+      <a href="javascript:;" id="link_reg">去注册账号</a>
+      </div>
+    </form>
+    </div>
   
+    <!-- 注册页面   一开始被隐藏 -->
+    <div class="reg-box">
+      <!-- 注册的表单 -->
+      <form class="layui-form" id="form_reg">
+
+        <!-- 用户名 -->
+        <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>   
+            <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+          </div>
+
+      <!-- 密码 -->
+      <div class="layui-form-item">
+        <i class="layui-icon layui-icon-password"></i> 
+        <input type="password" name="password" required  lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+      </div>
+      <!-- 确认密码 -->
+      <div class="layui-form-item">
+        <i class="layui-icon layui-icon-password"></i> 
+        <input type="password" name="re-password" required  lay-verify="required|pwd|repwd" placeholder="再次确认密码" autocomplete="off" class="layui-input">
+      </div>
+
+      <!-- 登录按钮 -->
+      <div class="layui-form-item">
+        <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注册</button>
+      </div>
+      <!-- 令herf等于Javascript的原因是为了点击a链接的时候不会自动跳转 -->
+      <div class="layui-form-item links">
+        <a href="javascript:;" id="link_login">去登录</a>
+      </div>
+    </form>
+      
+  </div>
+
+
+  <!-- 先导入layui的js，在导入自己的js，这样我们就可以在自己的js中使用layui的js -->
+  <!-- 导入layui的js文件 -->
+  <script src="/assets/lib/layui/layui.all.js"></script>
+<!-- 导入jQuery文件 -->
+  <script src="./assets/lib/jquery.js"></script>
+  <!-- 导入自己的baseAPI.js文件 -->
+  <script src="/assets/js/baseAPI.js"></script>
+  <!-- 导入自己的Javascript文件 -->
+  <script src="./assets/js/login.js"></script>
 </body>
 </html>
