@@ -1,51 +1,43 @@
-.layui-footer {
+.layui-footer{
   text-align: center;
   font-size: 12px;
 }
-
-.iconfont {
+.iconfont{
   margin-right: 8px;
 }
-
-.layui-icon {
+.layui-icon{
   margin-right: 8px;
   margin-left: 20px;
 }
-
-iframe {
-  width: 100%;
+iframe{
   height: 100%;
+  width: 100%;
 }
-
-.layui-body {
+.layui-body{
   overflow: hidden;
 }
-
-a {
+a{
   transition: none !important;
 }
-
-.userinfo {
+.userinfo{
   height: 60px;
   line-height: 60px;
   text-align: center;
   font-size: 12px;
   user-select: none;
 }
-
-.layui-side-scroll .userinfo {
+.layui-side-scroll .userinfo{
   border-bottom: 1px solid #282b33;
 }
-
-.layui-nav-img {
-  width: 40px;
+.layui-nav-img{
   height: 40px;
+  width: 40px;
 }
-
-.text-avatar {
+.text-avatar{
+  /* 一开始是行内元素，无法设置宽高，所以要改成行内块元素 */
   display: inline-block;
-  width: 40px;
   height: 40px;
+  width: 40px;
   background-color: #009688;
   border-radius: 50%;
   line-height: 40px;
@@ -55,4 +47,5 @@ a {
   position: relative;
   top: 4px;
   margin-right: 10px;
+
 }

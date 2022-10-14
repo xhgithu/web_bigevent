@@ -43,7 +43,7 @@ $('#form_reg').on('submit', function(e) {
   }
   //阻止默认提交行为
   e.preventDefault()
-  $.post('http://api-breakingnews-web.itheima.net/api/reguser', data, function(res){
+  $.post('/api/reguser', data, function(res){
     if(res.status !== 0) {
       return layer.msg(res.message)
     }
@@ -57,7 +57,7 @@ $('#form_login').submit(function(e) {
   e.preventDefault()
   //利用ajax来提交表单数据
   $.ajax({
-    url: 'http://api-breakingnews-web.itheima.net/api/login',
+    url: '/api/login',
     method: 'POST',
     data: $(this).serialize(),
     success: function(res) {
